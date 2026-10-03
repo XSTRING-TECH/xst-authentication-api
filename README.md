@@ -1,7 +1,4 @@
 # xst-authentication-api
-This repository provides a simple Node.js example showing how an application can integrate with the xString hosted Authentication API for passwordless authentication without installing xstAuth Light Server. The API is language-agnostic and can be used with applications written in any programming language that can make HTTPS requests.
-
-# xst-authentication-api
 
 Example integration showing how a **Confidential Client System (CCS)** can use the **xString Tech hosted Authentication API** for passwordless authentication without installing or self-hosting **xstAuth Light Server**.
 
@@ -11,11 +8,11 @@ The API interface is **language-agnostic**. This repository provides a Node.js e
 
 ## Deployment options
 
-A CCS can integrate with xString Tech authentication in two ways:
+A CCS can integrate with xString Tech authentication in multiple ways. The two main options are:
 
-### Hosted SaaS Authentication API
+### (1) SaaS Authentication API
 
-The CCS uses the xString Tech hosted Authentication API.
+The CCS uses the xString Tech hosted Authentication API. The CCS does not need to install or operate the authentication server.
 
 ```text
 User
@@ -28,18 +25,17 @@ CCS Web Server
   ▼
 xString Tech Authentication API
   │
-  │
   ▼
 Passwordless Authentication
 ```
 
-This option does not require the CCS to install or operate xstAuth Light Server.
+This option allows the CCS to use xString Tech authentication without hosting the authentication service within its own environment.
 
-### Self-hosted xstAuth Light Server
+### (2) Self-hosted xstAuth Light Server
 
-The CCS can instead install and operate **xstAuth Light Server** within its own environment.
+Alternatively, the CCS can install and operate [xstAuth Light Server](https://github.com/XSTRING-TECH/software-downloads?utm_source=chatgpt.com) within its own environment.
 
-This repository is specifically for the **hosted SaaS Authentication API** integration.
+This repository provides an example integration for the **Hosted SaaS Authentication API** option. It does not provide the xstAuth Light Server itself.
 
 ## About this example
 
