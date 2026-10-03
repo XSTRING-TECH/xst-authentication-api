@@ -6,6 +6,67 @@ The xString Tech Authentication API provides the interface between the CCS Web S
 
 The API interface is **language-agnostic**. This repository provides a Node.js example, but the same integration can be implemented in other programming languages, including Python, C#, Go, PHP, or any language capable of making HTTPS requests.
 
+# CCS Web Server and xstAuth Light Server
+
+## Setup and Important Information
+
+## What is CCS?
+
+**Confidential Client System (CCS)** is a proprietary term used by **XSTRING TECH PTY LTD** to describe user-facing digital systems designed to protect user data, control access to information and services, and require user authentication and/or age assurance.
+
+As you use XSTRING TECH technologies and solutions, the term **CCS** may be used throughout our documentation, technical specifications, examples, and implementation materials.
+
+### CCS — Your System
+
+CCS is effectively **your own user-facing system** that connects your end users to **xstAuth Light Server** for passwordless authentication.
+
+Your CCS delegates the authentication service to the Advanced Authentication System (AAS), xstAuth Light Server, powered by XSTRING TECH. The xstAuth Light Server operates within **your own infrastructure or environment**.
+
+---
+
+## Programming Language Requirements
+
+In this example, `HTTP-01.js`, `HTTPS-01.js`, and `server.js` are provided as **Node.js/JavaScript examples** for a CCS Web Server.
+
+If your CCS Web Server is developed using another programming language, such as **Python, C#, Go, or PHP**, implement the equivalent functionality in that language.
+
+The interface between your CCS Web Server and the **xstAuth Light Server** is **language-agnostic**, provided that the implementation supports the required **HTTPS/mTLS communication** and **HTTP request/response handling**.
+
+---
+
+## User App Requirements
+
+End users of your CCS require a compatible **Authenticator App** to perform passwordless authentication.
+
+Supported Authenticator Apps include:
+
+* **myAge**
+* **iRC Auth**
+
+When a user signs up or signs in to your CCS website, the user is delegated to **xstAuth Light Server** for passwordless authentication.
+
+The user then uses the **"Confirm it's you"** feature in one of the supported Authenticator Apps to approve the authentication request.
+
+> **IMPORTANT:** End users must have a compatible Authenticator App installed on their device to complete passwordless authentication.
+
+### Get the Authenticator App
+
+Users can obtain the supported Authenticator Apps from the official app stores:
+
+### myAge Authenticator
+
+**[Download on the App Store](https://apps.apple.com/us/app/myage/id6763018516)**
+
+**[Get it on Google Play](https://play.google.com/store/apps/details?id=com.xstring.poadc&pcampaignid=web_share)**
+
+### xString Advanced Authenticator (iRC Auth)
+
+**Download on the App Store — Coming Soon**
+
+**[Get it on Google Play](https://play.google.com/store/apps/details?id=com.xstring.ircauth&pcampaignid=web_share)**
+
+---
+
 ## Deployment options
 
 A CCS can integrate with xString Tech authentication in multiple ways. The two main options are:
