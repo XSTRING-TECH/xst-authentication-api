@@ -134,6 +134,8 @@ Additional contributions are optional. A CCS operator may make an additional con
 
 The payment does not constitute a guarantee by XSTRING TECH PTY LTD of API availability, reliability, performance or uninterrupted service. Users should have no expectation of guaranteed availability or performance.
 
+For CCS operators requiring greater control over availability or performance, an alternative is to install and operate [xstAuth Light Server](https://github.com/XSTRING-TECH/software-downloads) within their own environment.
+
 The credentials/configuration required by this example are:
 
 ```text
