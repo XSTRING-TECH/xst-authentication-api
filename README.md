@@ -49,7 +49,7 @@ This option allows the CCS to use xString Tech authentication without hosting th
 
 Alternatively, the CCS can install and operate [xstAuth Light Server](https://github.com/XSTRING-TECH/software-downloads?utm_source=chatgpt.com) within its own environment.
 
-This repository provides an example integration for the **SaaS Authentication API** option. It does not provide the xstAuth Light Server itself.
+This repository provides an example integration for the **SaaS Authentication API** option.
 
 ## About this example
 
