@@ -218,6 +218,16 @@ After successful verification, the example establishes a signed session cookie a
 /portal
 ```
 
+### Public key verification
+
+The example retrieves the xString Tech public signing keys from the following JWKS endpoint:
+
+`https://saas.xstring.tech/.well-known/jwks.json`
+
+The JWKS is used to obtain the public key corresponding to the `kid` in the JWT header. The CCS uses the matching public key to verify the RS256 signature of the ID Token returned by the xString Tech Authentication API.
+
+The public JWKS endpoint does not require API credentials.
+
 ## Security considerations
 
 This repository is a working integration example and is intended to demonstrate the interface between a CCS and the xString Tech Authentication API.
