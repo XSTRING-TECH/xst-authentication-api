@@ -1,6 +1,6 @@
 # xst-authentication-api
 
-Example integration showing how a **Confidential Client System (CCS)** can use the **xString Tech hosted Authentication API** for passwordless authentication without installing or self-hosting **xstAuth Light Server**.
+Example integration showing how a **CCS** can use the **xString Tech SaaS Authentication API** for passwordless authentication without installing or self-hosting **xstAuth Light Server**.
 
 The xString Tech Authentication API provides the interface between the CCS Web Server and the xString Tech hosted authentication service.
 
