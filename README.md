@@ -128,9 +128,11 @@ Before using the xString Tech Authentication API, the CCS operator must obtain A
 
 Go to [www.xstring.tech](https://www.xstring.tech?utm_source=chatgpt.com), sign in, and create the API credentials required for the CCS integration.
 
-Credential creation is currently behind a **$1 payment requirement**. The $1 payment is required to access the credential-creation process and is **not an API usage charge**. Payment does not constitute a guarantee by XSTRING TECH PTY LTD of API availability, reliability, performance or uninterrupted service. Users should have no expectation of guaranteed availability or performance.
+Credential creation is currently behind a **$1 payment paywall**. The $1 payment is required to access the credential-creation process and is **not an API usage charge**. **There is currently no separate charge for API usage.**
 
-Additional contributions are optional. A CCS operator may provide an additional donation if they wish, but no additional contribution is required to obtain or use the API credentials.
+Additional contributions are optional. A CCS operator may make an additional contribution if they wish, but no additional contribution is required to obtain or use the API credentials.
+
+The payment does not constitute a guarantee by XSTRING TECH PTY LTD of API availability, reliability, performance or uninterrupted service. Users should have no expectation of guaranteed availability or performance.
 
 The credentials/configuration required by this example are:
 
