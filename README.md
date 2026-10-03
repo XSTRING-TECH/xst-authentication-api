@@ -22,7 +22,7 @@ Your CCS delegates the authentication service to the **Advanced Authentication S
 
 ## Deployment options
 
-A CCS can integrate with xString Tech authentication in multiple ways. The two main options are:
+A CCS can integrate with xString Tech authentication in multiple ways. The two main lightweight options are:
 
 ### (1) SaaS Authentication API
 
