@@ -14,9 +14,9 @@ As you use XSTRING TECH technologies and solutions, the term **CCS** may be used
 
 ### CCS — Your System
 
-CCS is effectively **your own user-facing system** that connects your end users to **xstAuth Light Server** for passwordless authentication.
+CCS is effectively **your own user-facing system** that connects your end users to the **xString Tech Authentication API** for passwordless authentication.
 
-Your CCS delegates the authentication service to the Advanced Authentication System (AAS), xstAuth Light Server, powered by XSTRING TECH. The xstAuth Light Server operates within **your own infrastructure or environment**.
+Your CCS delegates the authentication service to the **Advanced Authentication System (AAS)**, which in this example refers to the **xString Tech SaaS Authentication API**. The xString Tech hosted authentication service operates within **xString Tech infrastructure** rather than within the CCS's own environment.
 
 ---
 
