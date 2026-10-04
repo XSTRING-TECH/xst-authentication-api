@@ -25,7 +25,7 @@ require('dotenv').config();
 // Enviroment variables from .env or from other method of your choice
 const cookieSecret = process.env.COOKIE_SECRET;
 const clientNpk = process.env.CLIENT_NPK;
-const accessScope = process.env.AUTH_SCOPE;
+const authScope = process.env.AUTH_SCOPE;
 const accessKeyId = process.env.ACCESS_KEY_ID;
 const secrtAccessKey = process.env.SECRET_ACCESS_KEY;
 const aasBaseUrl = process.env.AAS_BASE_URL; // AAS endpoint is only accesible to external Browser/UI if referred/redirected by the CCS
@@ -77,7 +77,6 @@ const CCS_LANDING_PG_URL = 'https://www.yourdomain.com.au'; // Home page showing
 
 CCS.post('/auth', async (req, res) => { // this endpoint is for both sign up and sign in
   // After filtering out invalid or suspicious requests, allow only genuine requests to pass through to the next stage of your application.
-
   let state = randomUUID();  // Generate state for a stateful integration with AAS. 
   // ANoI payload - Authentication Notice of Intent (ANoI)
   const anoiPayload = JSON.stringify({
@@ -93,7 +92,7 @@ CCS.post('/auth', async (req, res) => { // this endpoint is for both sign up and
     // If xst-authentication-api is used as the primary passwordless authentication
     // method, canonical_username does not need to be provided. The user's NPK
     // can be used as the authoritative canonical account identifier.
-    scope: accessScope,
+    scope: authScope,
     response_type: 'code', // Authorisation code (authCode) for CCS to exchange for security token.
     redirect_uri: CCS_BASE_URL, // After user is successfully authenticated the user's browser/UI is redirected to this endpoint with current state and authCode.
     landing_pg_uri: CCS_LANDING_PG_URL  // CCS Webpage, this is where the user first arrives and see signup/signin button. AAS will redirect the user here after multiple unsuccessful authentication attempts. 
