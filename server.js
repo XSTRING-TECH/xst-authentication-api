@@ -82,6 +82,17 @@ CCS.post('/auth', async (req, res) => { // this endpoint is for both sign up and
   // ANoI payload - Authentication Notice of Intent (ANoI)
   const anoiPayload = JSON.stringify({
     state: state,
+    canonical_username: "abc123_john_smith",
+    // The canonical username is the CCS's authoritative internal account
+    // identifier used to uniquely identify the user's account. It may be a
+    // conventional username or another unique internal identifier maintained
+    // by the CCS. This is particularly useful when the CCS needs to retain
+    // existing password-based authentication while using xst-authentication-api
+    // as a second factor of MFA for existing users.
+    //
+    // If xst-authentication-api is used as the primary passwordless authentication
+    // method, canonical_username does not need to be provided. The user's NPK
+    // can be used as the authoritative canonical account identifier.
     scope: accessScope,
     response_type: 'code', // Authorisation code (authCode) for CCS to exchange for security token.
     redirect_uri: CCS_BASE_URL, // After user is successfully authenticated the user's browser/UI is redirected to this endpoint with current state and authCode.
