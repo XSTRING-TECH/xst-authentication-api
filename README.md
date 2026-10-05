@@ -98,6 +98,15 @@ Copy this file to `.env` and provide the appropriate values for the CCS environm
 
 Defines the Node.js project and its required dependencies.
 
+# Prerequisites
+
+It is assumed that the CCS already has:
+
+* Its own domain name.
+* A DNS record pointing the domain to a static public IP address.
+* A valid TLS certificate for the domain (for example, a free certificate from **Let's Encrypt**).
+* A fully functioning HTTPS web server accessible through the domain.
+  
 ## Node.js requirements
 
 If the CCS Web Server is implemented using Node.js, install the required dependencies:
