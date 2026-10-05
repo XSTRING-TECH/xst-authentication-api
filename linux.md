@@ -1,4 +1,4 @@
-## Basic Linux Commands
+# Basic Linux Commands
 
 ```bash
 cat /etc/os-release
@@ -17,12 +17,18 @@ clear
 history
 ```
 
-### Editing files with nano
+## Editing Files with nano
 
 ```bash
 nano .env
-nano myserver.js
+nano server.js
 ```
+
+> **Note:** If `server.js` cannot be edited because of Linux file permission restrictions, simply create a new file instead:
+>
+> ```bash
+> nano myserver.js
+> ```
 
 In `nano`:
 
@@ -30,7 +36,7 @@ In `nano`:
 * `Enter` → confirm filename
 * `Ctrl + X` → exit
 
-### Useful nano shortcuts
+### Useful nano Shortcuts
 
 * `Ctrl + W` → search
 * `Ctrl + _` → go to a specific line
