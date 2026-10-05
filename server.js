@@ -101,7 +101,7 @@ CCS.post('/auth', async (req, res) => { // this endpoint is for both sign up and
   const apiKey = generateApiKey();
 
   try {     
-    const responsed = await axios.post(`${aasBaseUrl}/anoi`, { data: anoiPayload }, { headers: { 'x-api-key': apiKey, 'x-key-npk': clientNpk, 'x-key-id': accessKeyId }, httpsAgent: httpsagent, });
+    const responsed = await axios.post(`${aasBaseUrl}/anoi`, { data: anoiPayload }, { headers: { 'x-api-key': apiKey, 'x-key-npk': clientNpk, 'x-key-id': accessKeyId } });
       const params = new URLSearchParams(responsed.data);
       res.redirect(`${aasBaseUrl}/authenticate?${params.toString()}`);
       //res.redirect(`${AAS_AUTH_URL}?rse=${responsed.data.state}`);
@@ -114,10 +114,20 @@ CCS.post('/auth', async (req, res) => { // this endpoint is for both sign up and
 // CCS obtains .well-known public key for verifying ID Token post sucessfull authentication.
 let jwtpublickey;
 async function getmepubkey(){
-  const response = await axios.get('https://saas.xstring.tech/.well-known/jwks.json', { httpsAgent: httpsagent } );
-  console.log('status', response.status);
-  jwtpublickey = response.data;
-  }; getmepubkey();
+  try {
+  const response = await axios.get('https://saas.xstring.tech/.well-known/jwks.json');
+   console.log('status', response.status);
+   jwtpublickey = response.data; 
+  } catch (error) {
+    // Don't log the entire Axios error object
+    if (error.response?.status === 404) {
+        console.log('JWKS endpoint not available.');
+    } else {
+        console.log('Unable to retrieve JWKS.');
+    }
+  }
+}
+getmepubkey();
 
 // CCS facing Browser/UI using https
 CCS.get('/code-exchange', async (req, res) => {  // this endpoint code-exchange for ID Token
@@ -125,7 +135,7 @@ CCS.get('/code-exchange', async (req, res) => {  // this endpoint code-exchange 
   const authPayload = JSON.stringify({ state: state, authcode: code, redirect_uri: CCS_BASE_URL });
   const apiKey = generateApiKey();
   try {     
-      const responsed = await axios.post(`${aasBaseUrl}/token-exchange`, { data: authPayload }, { headers: { 'x-api-key': apiKey, 'x-key-npk': clientNpk, 'x-key-id': accessKeyId }, });
+      const responsed = await axios.post(`${aasBaseUrl}/token-exchange`, { data: authPayload }, { headers: { 'x-api-key': apiKey, 'x-key-npk': clientNpk, 'x-key-id': accessKeyId } });
       const idToken = responsed.data.jwt;
       let verifiedIdToken;
       try {
