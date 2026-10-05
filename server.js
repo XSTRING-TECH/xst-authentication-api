@@ -81,7 +81,7 @@ CCS.post('/auth', async (req, res) => { // this endpoint is for both sign up and
   // ANoI payload - Authentication Notice of Intent (ANoI)
   const anoiPayload = JSON.stringify({
     state: state,
-    canonical_username: "abc123_john_smith",
+    canonical_username: "abc123_bob_jones",
     // The canonical username is the CCS's authoritative internal account
     // identifier used to uniquely identify the user's account. It may be a
     // conventional username or another unique internal identifier maintained
