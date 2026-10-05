@@ -139,6 +139,7 @@ CCS.get('/code-exchange', async (req, res) => {  // this endpoint code-exchange 
         const publicKey = crypto.createPublicKey({ key: jwk, format: "jwk" });
         // 4. Verify JWT
         verifiedIdToken = jwt.verify( idToken, publicKey, { algorithms: ["RS256"] });
+        // console.log(verifiedIdToken);
         console.log("✅ ID token JWT signature verified");
       } catch (err) {
           // If even one character of the JWT payload or other signed content is altered, signature verification will fail.
