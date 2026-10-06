@@ -16,10 +16,10 @@ cd /var/www/nodeapp
 ls
 npm init -y
 npm install express axios dotenv body-parser jsonwebtoken cookie-parser
-sudo node myserver.js
 nano .env
 nano myserver.js
 clear
+sudo node myserver.js
 history
 ```
 
