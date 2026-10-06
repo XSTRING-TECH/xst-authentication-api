@@ -248,7 +248,8 @@ const ipaddress = '0.0.0.0';
 const port = '443';
 https.createServer({
   key: fs.readFileSync(process.env.PRIVATE_KEY),
-  cert: fs.readFileSync(process.env.CERTIFICATE)
+  //cert: fs.readFileSync(process.env.CERTIFICATE)
+  cert: fs.readFileSync(process.env.FULL_CHAIN)
 }, CCS).listen(port, ipaddress, () => {
   console.log('SaaS Client Server is running on https://www.yourdomain.com:443 for authentication only.');
 });
