@@ -72,7 +72,7 @@ function generateApiKey() {
 }
 
 // CCS Endpoints
-const CCS_BASE_URL = 'https://www.yourdomain.com/code-exchange'; // Post authencation AAS redirects Browser/UI to this endpoint of CCS with the state and authorisation code.
+const CCS_BASE_URL = process.env.AUTH_CODE_URL; // Post authencation AAS redirects Browser/UI to this endpoint of CCS with the state and authorisation code.
 const CCS_LANDING_PG_URL = 'https://www.yourdomain.com.au'; // Home page showing signup/signin buttons. This is where the user first arrives or is sent after failed login. AAS redirects the user here after multiple unsuccessful signup/signin.
 
 CCS.post('/auth', async (req, res) => { // this endpoint is for both sign up and sign in
