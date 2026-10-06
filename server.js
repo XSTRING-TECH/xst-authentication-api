@@ -250,5 +250,5 @@ https.createServer({
   key: fs.readFileSync(process.env.PRIVATE_KEY),
   cert: fs.readFileSync(process.env.CERTIFICATE)
 }, CCS).listen(port, ipaddress, () => {
-  console.log('SaaS Client Server is running on https://www.yourdomain:443 for authentication only.');
+  console.log('SaaS Client Server is running on https://www.yourdomain.com:443 for authentication only.');
 });
