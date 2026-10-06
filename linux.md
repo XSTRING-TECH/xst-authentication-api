@@ -5,6 +5,12 @@ cat /etc/os-release
 sudo pm2 list
 sudo pm2 stop all
 sudo ss -ltnp | grep ':80'
+sudo apt update
+sudo apt install snapd
+sudo snap install snapd
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/local/bin/certbot
+certbot --version
 sudo certbot certonly --standalone -d www.yourdomain.com
 cd /var/www/nodeapp
 ls
