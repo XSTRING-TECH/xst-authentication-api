@@ -12,6 +12,8 @@ sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/local/bin/certbot
 certbot --version
 sudo certbot certonly --standalone -d www.yourdomain.com
+sudo ls -la /etc/letsencrypt/live/
+sudo ls -la /etc/letsencrypt/live/www.yourdomain.com/
 cd /var/www/nodeapp
 ls
 npm init -y
