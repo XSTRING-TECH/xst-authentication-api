@@ -101,7 +101,7 @@ Reload Apache
 sudo systemctl reload apache2
 ```
 
-Check the HTTPS response, replacing www.yourdomain.com with your own domain:
+Check the HTTPS response, replacing `www.yourdomain.com` with your own domain:
 ```bash
 curl -I https://www.yourdomain.com
 ```
@@ -299,9 +299,11 @@ This refreshes WordPress’s rewrite rules so the `/code-exchange` callback can 
 
 ## 5. Test WordPress Login
 
-Replace your-wordpress-domain.com with your own domain. Open the normal WordPress login page.
+Open the normal WordPress login page.
 
 If you are still logged in as an administrator, open the WordPress login page in another browser or log out of the administrator account. You should then see Continue with iRC Authentication.
+
+Replace your-wordpress-domain.com with your own domain. 
 
 ```text
 https://your-wordpress-domain.com/wp-login.php
