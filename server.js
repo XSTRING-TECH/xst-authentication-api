@@ -47,18 +47,18 @@ CCS.get("/", (req, res) => {
     // It is provided as a working example and does not include reCAPTCHA or other
     // production security/filtering mechanisms that may be required by your CCS.
         res.send(`
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Confidential Client User Interface</title>
-        </head>
-        <body>
-          Passwordless Authentication with xString Tech API
-          <br></br>
-          <form action="/auth" method="POST" target="aas"><button type="submit">Sign up / sign in</button></form>
-        </body>
-        </html>
-          `);
+         <!DOCTYPE html>
+         <html>
+         <head>
+           <title>Confidential Client User Interface</title>
+         </head>
+         <body>
+           Passwordless Authentication with xString Tech API
+           <br></br>
+           <form action="/auth" method="POST" target="aas"><button type="submit">Sign up / sign in</button></form>
+         </body>
+         </html>
+        `);
 });
 
 // Function to compute API key locally
@@ -203,21 +203,21 @@ CCS.get("/portal", (req, res) => {
   // Prevent the protected page from being cached by the browser or intermediate caching systems.
   res.setHeader("Cache-Control", "no-store");
   res.send(`
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <title>Confidential Client User Interface</title>
-  </head>
-  <body>
-  <h1>${usertype} Web Portal</h1><h4>Welcome, ${NPK}. You have successfully signed in or signed up (if you are a new user).</h4>
-  <h3> Random Number: ${randomNum.toString()} </h3>
-  <p id="normalSite">This site has no age restrictions.</p>
-    <form action="/logout" method="POST">
-      <input type="hidden" name="npk" value=${npk}>
-      <button type="submit">Logout</buton>
-    </form>
-  </body>
-  </html>
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <title>Confidential Client User Interface</title>
+   </head>
+   <body>
+   <h1>${usertype} Web Portal</h1><h4>Welcome, ${NPK}. You have successfully signed in or signed up (if you are a new user).</h4>
+   <h3> Random Number: ${randomNum.toString()} </h3>
+   <p id="normalSite">This site has no age restrictions.</p>
+     <form action="/logout" method="POST">
+       <input type="hidden" name="npk" value=${npk}>
+       <button type="submit">Logout</buton>
+     </form>
+   </body>
+   </html>
   `);
 });
 
