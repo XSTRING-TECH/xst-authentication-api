@@ -1,4 +1,4 @@
-# xString Tech Server Commands
+# WordPress Linux Server Commands
 
 ## 1. System Information
 
