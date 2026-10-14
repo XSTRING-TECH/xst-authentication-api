@@ -71,9 +71,9 @@ Configure the following settings:
 
 The configured Auth Code URL is checked against the callback URL derived from the WordPress site's configured home URL. Register the same callback URL with the xString Authentication API.
 
-The authentication redirect is checked to ensure it uses HTTPS and the same hostname as the configured AAS Base URL. However, the current implementation does not consistently enforce HTTPS for all API requests.
-
 The plugin stores its settings, including the Secret Access Key, in WordPress options. For higher-security deployments, consider an appropriate secrets-management approach and restrict administrative access.
+
+Review the PHP implementation to verify that HTTPS is enforced for all outgoing API requests.
 
 ## Shortcode
 
