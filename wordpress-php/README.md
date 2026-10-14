@@ -51,7 +51,7 @@ Users can continue using their existing WordPress username and password. However
 3. The plugin uses the existing xString Tech SaaS Authentication API to verify the iRC through an appropriate authentication flow. Once verification succeeds, the plugin associates the verified NPK with the signed-in WordPress account by storing it in `irc_npk`.
 4. Once the link is established, the user can sign in using either their existing WordPress username and password or the iRC Passwordless Method.
 
-This is a proposed enhancement, not a feature currently provided by the plugin.
+This is a proposed enhancement, not a feature currently provided by the plugin. The plugin currently supports account sign-up using the iRC Passwordless Method and passwordless sign-in.
 
 ## Configuration
 
