@@ -101,7 +101,7 @@ Reload Apache
 sudo systemctl reload apache2
 ```
 
-Check the HTTPS response:
+Check the HTTPS response, replacing www.yourdomain.com with your own domain:
 ```bash
 curl -I https://www.yourdomain.com
 ```
@@ -153,11 +153,7 @@ Verify that the file exists:
 ls -l
 ```
 
-The directory should contain:
-
-```text
-xstring-tech-passwordless.php
-```
+The directory should contain: xstring-tech-passwordless.php
 
 ```bash
 sudo ls -l /var/www/html/wp-content/plugins/xstring-tech-passwordless/xstring-tech-passwordless.php
@@ -240,6 +236,8 @@ If WP-CLI is not installed or this command is not suitable for your server, use 
 
 If you can access the administrator account’s registered email address, open `https://your-wordpress-domain.com/wp-login.php?action=lostpassword`, enter the account’s username or email address, and follow the password-reset link sent by WordPress. If email-based recovery is unavailable, use the recovery procedure documented for your WordPress hosting environment.
 
+Open the WordPress login page, replacing your-wordpress-domain.com with your own domain:
+
 ```bash
 https://your-wordpress-domain.com/wp-login.php
 ```
@@ -250,7 +248,9 @@ After logging in successfully as an administrator, navigate to:
 
 Find:
 
-**xString Tech Passwordless Authentication**
+```text
+xString Tech Passwordless Authentication
+```
 
 Click **Activate**.
 
@@ -299,12 +299,20 @@ This refreshes WordPress’s rewrite rules so the `/code-exchange` callback can 
 
 ## 5. Test WordPress Login
 
-Open the normal WordPress login page:
+Replace your-wordpress-domain.com with your own domain. Open the normal WordPress login page.
+
+If you are still logged in as an administrator, open the WordPress login page in another browser or log out of the administrator account. You should then see Continue with iRC Authentication.
 
 ```text
 https://your-wordpress-domain.com/wp-login.php
 ```
 Select **Continue with iRC Authentication** and complete the authentication request in a supported authenticator app. If the button or authentication flow does not work, refresh the page and try again. If it succeeds, confirm that the user is logged in to the expected WordPress account.
+
+If you see this error:
+
+`cURL error 28: Failed to connect to saas.xstring.tech port 443 after 10000 ms: Timeout was reached`
+
+The SaaS Authentication API may be temporarily unavailable. Please email info@xstring.tech for assistance.
 
 The existing WordPress login should remain available, including:
 
