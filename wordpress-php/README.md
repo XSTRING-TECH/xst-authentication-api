@@ -69,7 +69,7 @@ Configure the following settings:
 - **Auth Code URL** — must match this site's `/code-exchange` callback URL.
 - **Landing Page URL**
 
-The configured Auth Code URL is checked against the callback URL derived from the WordPress site's configured home URL. Register the same callback URL with the xString Authentication API.
+The WordPress plugin validates the configured Auth Code URL against the expected `/code-exchange` callback URL derived from the WordPress site's configured home URL. The same callback URL must be registered with the xString Tech SaaS Authentication API.
 
 The plugin stores its settings, including the Secret Access Key, in WordPress options. For higher-security deployments, consider an appropriate secrets-management approach and restrict administrative access.
 
