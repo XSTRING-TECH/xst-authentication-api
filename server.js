@@ -55,7 +55,7 @@ CCS.get("/", (req, res) => {
         <body>
           Passwordless Authentication with xString Tech API
           <br></br>
-          <form action="/auth" method="POST"><button type="submit">Sign up / sign in</button></form>
+          <form action="/auth" method="POST" target="aas"><button type="submit">Sign up / sign in</button></form>
         </body>
         </html>
           `);
@@ -239,8 +239,16 @@ CCS.get("/logout-confirm", (req, res) => {
   res.set("Expires", "0");
 
   res.send(`
-  <h2>Sucessfully signed out</h2>
-  <a href=/>Start Live Demo</a>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Signed Out</title>
+    </head>
+    <body>
+      <h2>Successfully signed out</h2>
+      <button type="button" onclick="window.close();">Close window</button>
+    </body>
+    </html>
   `);
 });
 
