@@ -44,13 +44,14 @@ The NPK field displayed on the WordPress user profile is read-only in the plugin
 
 Users can continue using their existing WordPress username and password. However, the plugin does not currently provide a process for linking an existing password-based account to an iRC.
 
-A possible future enhancement is to allow a signed-in user to link an iRC to their existing account through a verified authentication flow. The system would then store the verified NPK in `irc_npk`, allowing the user to sign in using either method.
+#### Proposed enhancement: Link an existing account
 
-Enhancement detailed steps:
 1. The user signs in to their existing WordPress account using their normal username and password.
 2. The user enters their iRC NPK (e.g. `NPK.123456789012`) in their WordPress account settings.
-3. The system would use the existing xString Tech SaaS Authentication API to verify the iRC through an appropriate authentication flow. Once verified, the system would associate the iRC with the signed-in WordPress account by storing the NPK in `irc_npk`.
+3. The plugin uses the existing xString Tech SaaS Authentication API to verify the iRC through an appropriate authentication flow. Once verification succeeds, the plugin associates the verified NPK with the signed-in WordPress account by storing it in `irc_npk`.
 4. Once the link is established, the user can sign in using either their existing WordPress username and password or the iRC Passwordless Method.
+
+This is a proposed enhancement, not a feature currently provided by the plugin.
 
 ## Configuration
 
@@ -130,7 +131,7 @@ Test in a staging WordPress environment before deploying to production. Testing 
 - Invalid, expired and not-yet-valid tokens
 - JWT issuer and audience validation
 - State mismatch, expiry and replay attempts
-- Browser-bound state validation
+- Browser-bound state validation, if implemented
 - Signing-key rotation and JWKS refresh
 - HTTPS enforcement and callback URL validation
 - Native WordPress login
