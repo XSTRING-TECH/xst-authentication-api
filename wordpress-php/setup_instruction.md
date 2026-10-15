@@ -303,7 +303,7 @@ Open the normal WordPress login page.
 
 If you are still logged in as an administrator, open the WordPress login page in another browser or log out of the administrator account. You should then see Continue with iRC Authentication.
 
-Replace your-wordpress-domain.com with your own domain. 
+Replace `your-wordpress-domain.com` with your own domain. 
 
 ```text
 https://your-wordpress-domain.com/wp-login.php
